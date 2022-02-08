@@ -1,0 +1,13 @@
+<meta charset="utf-8">;
+<script>
+var vklad = parseInt (prompt ('Введите сумму вклада'));
+var percent = parseInt (prompt('Введите сумму процентов по вкладу'));
+var period = parseInt (prompt ('Введите количество лет'));
+var summa = vklad;
+for (var n=1; n<=period;n++){
+  summa = vklad/100*percent;
+  vklad= Math.round (vklad+summa);
+  alert ('Сумма по вкладу в '+ n + ' год равна '+ vklad);
+}
+
+</script>
