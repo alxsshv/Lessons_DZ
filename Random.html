@@ -1,0 +1,24 @@
+<meta charset="utf-8">;
+
+<script>
+var arr = [];
+var rounds = 30;
+var crasn = 0;
+var i = 0;
+var n = 0;
+for (i=0; i<=rounds; i++) {
+  arr.push (Math.round(Math.random()*2-1));
+}
+  alert (arr);
+for (i=0;i<arr.length;i++){
+
+  if (arr[i]==-1) {
+    n++;
+} else if ((((arr[i-1]==-1) && (arr[i]!=-1)) || ((arr[i-1]==-1)&& (i+1>arr.lenght))) && (n>crasn)) {
+    crasn = n;
+    n=0;
+    }
+
+  }
+  alert (crasn);
+</script>
