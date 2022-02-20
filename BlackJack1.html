@@ -56,7 +56,11 @@ do {
   answer = prompt (GetStatus()+'Еще карту? да или нет?');
   if (answer == 'да') {
   player.push(GetCard());
-  }
+} else {
+  var sumDealer = GetSum (dealer);
+  var sumPlayer = GetSum (player);
+}
+
 
 } while (answer == 'да');
 
