@@ -44,12 +44,20 @@ var player = [GetCard(), GetCard()];
 
 var answer = '';
 do {
-    answer = prompt (GetStatus()+'Еще карту? да или нет?');
-
-  if (answer == 'да') {
-    player.push(GetCard());
-  }
   alert (GetStatus());
+  if (GetSum(player)== 21){
+  prompt (GetStatus()+' Поздравяю! Вы победили!');
+  break;
+  }
+  if (GetSum(player) > 21){
+  prompt (GetStatus()+' Перебор! Повезет в другой раз!');
+  break;
+  }
+  answer = prompt (GetStatus()+'Еще карту? да или нет?');
+  if (answer == 'да') {
+  player.push(GetCard());
+  }
+
 } while (answer == 'да');
 
 
